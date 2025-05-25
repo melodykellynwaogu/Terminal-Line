@@ -18,15 +18,21 @@ HTML = """
       font-family: monospace;
       outline: none;
       width: 60%;
+      min-width: 100px;
+      max-width: 100%;
+      font-size: 1em;
     }
     .terminal {
       width: 700px;
+      max-width: 98vw;
       height: 400px;
+      max-height: 80vh;
       background: #111;
       border: 3px solid cyan;
       border-radius: 8px;
       margin: 40px auto;
       padding: 1.5rem;
+      box-sizing: border-box;
       box-shadow: 2px 4px 8px rgba(0,0,0,0.9);
       overflow-y: auto;
       color: #fff;
@@ -34,6 +40,7 @@ HTML = """
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      transition: width 0.2s, height 0.2s;
     }
     body {
       background-color: #222;
@@ -43,6 +50,31 @@ HTML = """
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0;
+    }
+    @media (max-width: 800px) {
+      .terminal {
+        width: 98vw;
+        height: 60vh;
+        padding: 1rem;
+        font-size: 1em;
+      }
+      #terminal-input {
+        width: 90%;
+        font-size: 0.95em;
+      }
+    }
+    @media (max-width: 500px) {
+      .terminal {
+        width: 100vw;
+        height: 60vh;
+        padding: 0.5rem;
+        font-size: 0.95em;
+      }
+      #terminal-input {
+        width: 100%;
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
