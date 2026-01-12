@@ -8,7 +8,7 @@ HTML = """
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fake Terminal</title>
+  <titleTerminal</title>
   <style>
     .prompt { color: #00ffff; font-family: monospace; }
     #terminal-input {
